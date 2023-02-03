@@ -1,9 +1,27 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+import QNavigationDrawer from './components/navigationDrawer/QNavigationDrawer.vue';
+import BasicNavigationDrawer from './components/navigationDrawer/BasicNavigationDrawer.vue';
+import HeaderPictureNavigationDrawer from './components/navigationDrawer/HeaderPictureNavigationDrawer.vue';
+export default defineComponent({
+  components:{
+    QNavigationDrawer,
+    BasicNavigationDrawer,
+    HeaderPictureNavigationDrawer
+  },
+})
+</script>
+
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <!-- <h3>Vue 3 + TypeScript + Quasar App</h3> -->
+    <QNavigationDrawer/>
+    <br/>
+    <BasicNavigationDrawer/>
+    <br/>
+    <HeaderPictureNavigationDrawer/>
+  </div>
 </template>
 
 <style>
